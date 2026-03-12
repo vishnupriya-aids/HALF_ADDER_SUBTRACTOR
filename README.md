@@ -18,7 +18,8 @@ Half adder is a combinational circuit that performs simple addition of two binar
 
 Sum = A’B+AB’ =A ⊕ B Carry = AB
 
-![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
+![image](https://github.com/user-attachments/assets/2b0c30fa-a085-4567-9cd5-f8809ac16bc4)
+
 
 Figure -01 HALF ADDER
 
@@ -29,11 +30,22 @@ The half-subtractor is a combinational circuit which is used to perform subtract
 Diff = A’B+AB’ =A ⊕ B
 Borrow = A’B
 
- ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
+![image](https://github.com/user-attachments/assets/8372e670-4886-48bb-8369-820568a64d54)
+
 
 Figure -02 HALF Subtractor
 
 **Truthtable**
+HALF ADDER
+
+![image](https://github.com/user-attachments/assets/5ddc52ef-d125-4442-8265-139c2bb7c6e7)
+
+
+HALF SUBTRACTOR
+
+![image](https://github.com/user-attachments/assets/83ec047b-4a5b-42ea-ac00-af7c49740ea2)
+
+
 
 **Procedure**
 
@@ -50,12 +62,57 @@ Figure -02 HALF Subtractor
 
 **Program:**
 
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+```
+Program to design a half adder and half subtractor circuit and verify its truth table in quartus using Verilog programming.
+Developed by:vishnupriya E
+RegisterNumber:212225230308
 
-Developed by: RegisterNumber:*/
+```
+**Half Adder**
+```
+module half_adder(sum, carry, a, b);
+  output sum;
+  output carry;
+  input a;
+  input b;
+  assign sum = a ^ b;
+  assign carry = a & b;
+endmodule
+
+```
+**Half Subtractor**
+```
+module half_subtractor(diff, borrow, a, b);
+  output diff;
+  output borrow;
+  input a;
+  input b;
+  assign diff = a ^ b;
+  assign borrow = ~a & b;
+endmodule
+
+```
 
 **RTL Schematic**
+**Half Adder**
+![image](https://github.com/user-attachments/assets/0163d5e3-fda4-46e5-b48d-c4f5023a0b6a)
+
+**Half Subtractor**
+![image](https://github.com/user-attachments/assets/69257a8c-0afa-44a0-a4d3-3973d8438069)
+
+
+
 
 **Output/TIMING Waveform**
+**Half Adder**
+![image](https://github.com/user-attachments/assets/0597ca12-88b3-4231-878a-e3a4da2af7ff)
+
+**Half Subtractor**
+![image](https://github.com/user-attachments/assets/5d6b55fe-2e1d-43a7-a3a5-51dd04b9b713)
+
+
+
 
 **Result:**
+
+Thus the Half Adder and Half Subtractor are studied and the truth tables are verified
